@@ -52,15 +52,6 @@ const TeacherForm = () => {
   };
 
   const handleSubmit = () => {
-    console.log({
-      name,
-      avatar,
-      bio,
-      whatsapp,
-      subject,
-      cost,
-      scheduleItems,
-    });
     api
       .post("/classes", {
         name,

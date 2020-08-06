@@ -22,11 +22,6 @@ const TeacherList = () => {
 
   const searchTeachers = (e: any) => {
     if (e.key === "Enter" && subject && week_day && time) {
-      console.log({
-        subject,
-        week_day,
-        time,
-      });
       api
         .get("/classes", {
           params: {
@@ -36,7 +31,6 @@ const TeacherList = () => {
           },
         })
         .then(({ data }) => {
-          console.log(data);
           setTeachers(data);
         });
     }
